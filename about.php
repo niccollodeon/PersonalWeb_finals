@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="try.css">
-    <title>Contact - Personal Website</title>
+    <title>About - Personal Website</title>
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
     <link rel="stylesheet" href="https://fonts.google.com/?query=barcode+128">
@@ -24,12 +24,12 @@
                 <ul class="links">
                     <li>
                         <div class="animation-rotate-text-container">
-                            <a href="index.html" data-link-alt="Home"><span class="spn_nav">Home</span></a>
+                            <a href="index.php" data-link-alt="Home"><span class="spn_nav">Home</span></a>
                         </div>
                     </li>
                     <li>
                         <div class="animation-rotate-text-container">
-                            <a href="about.html" data-link-alt="About"><span class="spn_nav">About</span></a>
+                            <a href="#about" data-link-alt="About"><span class="spn_nav">About</span></a>
                         </div>
                     </li>
                     <li>
@@ -39,7 +39,7 @@
                     </li>
                     <li>
                         <div  class="animation-rotate-text-container">
-                            <a href="#contact" data-link-alt="Contact"><span class="spn_nav">Contact</span></a>
+                            <a href="contact.php" data-link-alt="Contact"><span class="spn_nav">Contact</span></a>
                         </div>
                     </li>
                 </ul>
@@ -84,34 +84,64 @@
         </div>
     </div>
     <div class="section">
-        <div class="spacer-4em---48px"></div>
         <div class="container w-container">
-            <div class="contact-us-info-container">
-                <div class="animation-content">
-                    <h2 class="h3-audiowide">CONTACT</h2>
+            <div class="spacer-1-3em---16px"></div>
+            <div class="about-us-container">
+                <div class="contact-form-container">
+                    <div class="animation-content-2">
+                        <h1 class="overline-small white">About me</h1>
+                    </div>
+                    <div class="spacer-0-7em---8px"></div>
+                    <div class="animation-content-2">
+                        <h2 class="h3-audiowide">Hard Work Pays Off</h2>
+                    </div>
+                    <div class="spacer-16px"></div>
+                    <p class="text-md withe light">
+                        I am a dedicated and passionate professional with a strong focus on delivering well-designed websites, projects, and applications. My commitment to excellence drives me to produce high-quality work that meets the unique needs of each company I collaborate with. I thrive in group settings, leveraging my teamwork skills to contribute effectively to collective goals. Always eager to learn and grow, I embrace opportunities for professional development to continually enhance my skills and stay at the forefront of industry advancements.
+                    </p>
                 </div>
-                <div class="animation-content">
-                    <p class="text-md-contact-us">Don't hesitate to reach out with any questions.</p>
+                <div class="about-us-image-container">
+                    <div class="div-block-4">
+                        <img src="uploads/cropped.jpeg" alt="about" class="about-image" sizes="(max-width: 479px) 93vw, (max-width: 767px) 92vw, (max-width: 991px) 94vw, (max-width: 1439px) 42vw, (max-width: 1919px) 92vw">
+                    </div>
                 </div>
-                <div class="animation-content">
-                    <a href="#" class="contact-link">niccollodayrit25@gmail.com</a>
-                </div>
-                <div class="animation-content">
-                    <a href="" class="contact-link">09202974733</a>
-                </div>
-            </div>
-            <div class="contact-form w-form">
-                <form method="get" name="wf-form-Contact-us-Email-Form" data-name="Contact is Email Form" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" aria-label="Contact us Email Form">
-                    <input type="text" class="moder-form-text-field w-input" maxlength="255" name="Name" data-name="Name" placeholder="Your Name" id="Name" required>
-                    <input type="tel" class="moder-form-text-field w-input" maxlength="255" name="Name-3" data-name="Name 3" placeholder="Your Phone" id="Name-3" required>
-                    <input type="email" class="moder-form-text-field w-input" maxlength="255" name="Name-2" data-name="Name 2" placeholder="Your Phone" id="Name-2" required>
-                    <textarea class="modern-text-area w-input" id="Message" name="Message" maxlength="5000" data-name="Message" placeholder="Your Message" required>
-                    </textarea>
-                    <input type="submit" data-wait="Please wait..." class="button-contact-us w-button" value="Submit your Message">
-                </form>
-
             </div>
         </div>
+    </div>
+    <div class="section">
+        <div class="container w-container">
+            <div class="spacer-1-3em---16px"></div>
+            <div class="animation-content-2">
+                <h1 class="overline-small white">Skills</h1>
+            </div>
+            <div class="skill-container">
+                <div class="skill-box">
+                    <span class="skill-title">HTML</span>
+                    <div class="skill-bar">
+                        <span class="skill-per html">
+                            <span class="tooltip">60%</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <span class="skill-title">CSS</span>
+                    <div class="skill-bar">
+                        <span class="skill-per css">
+                            <span class="tooltip">50%</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <span class="skill-title">Java</span>
+                    <div class="skill-bar">
+                        <span class="skill-per java">
+                            <span class="tooltip">50%</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
     <footer>
         <div class="container w-container">
@@ -136,10 +166,10 @@
                 <div class="footer-link-block">
                     <div class="footer-links-container">
                         <div class="footer-link-title-1">Menu</div>
-                        <a href="index.html" class="footer-link-title" style="--clr:#CB1DCD"><span class="spn-link">Home</span></a>
-                        <a href="about.html" class="footer-link-title" style="--clr:#CB1DCD"><span class="spn-link">About</span></a>
+                        <a href="index.php" class="footer-link-title" style="--clr:#CB1DCD"><span class="spn-link">Home</span></a>
+                        <a href="#about" class="footer-link-title" style="--clr:#CB1DCD"><span class="spn-link">About</span></a>
                         <a href="/#projects" class="footer-link-title" style="--clr:#CB1DCD"><span class="spn-link">Projects</span></a>
-                        <a href="#contact" class="footer-link-title" style="--clr:#CB1DCD"><span class="spn-link">Contact</span></a>
+                        <a href="contact.php" class="footer-link-title" style="--clr:#CB1DCD"><span class="spn-link">Contact</span></a>
                     </div>
                     <div class="footer-links-container">
                         <div class="footer-link-title-1">Admin</div>

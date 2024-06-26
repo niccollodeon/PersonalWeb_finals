@@ -1,3 +1,9 @@
+<?php
+// Include the database connection file
+include('connect.php');
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +35,7 @@
                     </li>
                     <li>
                         <div class="animation-rotate-text-container">
-                            <a href="about.html" data-link-alt="About"><span class="spn_nav">About</span></a>
+                            <a href="about.php" data-link-alt="About"><span class="spn_nav">About</span></a>
                         </div>
                     </li>
                     <li>
@@ -39,7 +45,7 @@
                     </li>
                     <li>
                         <div  class="animation-rotate-text-container">
-                            <a href="contact.html" data-link-alt="Contact"><span class="spn_nav">Contact</span></a>
+                            <a href="contact.php" data-link-alt="Contact"><span class="spn_nav">Contact</span></a>
                         </div>
                     </li>
                 </ul>
@@ -162,35 +168,34 @@
                     <input type="radio" name="slider" id="s2">
                     <input type="radio" name="slider" id="s3">
 
-                    <div class="cards">
-                        <label for="s1" id="slide1">
+                    < class="cards">
+
+                    <?php
+                    $sql_count = "SELECT COUNT(*) AS total FROM `projects`";
+                $result_count = mysqli_query($con, $sql_count);
+
+                // Fetch records for the current page
+                $sql = "SELECT * FROM `projects`";
+                $result = mysqli_query($con, $sql);
+
+                if ($result) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $id = $row['project_ID'];
+                        $title = $row['proj_title'];
+                        $description = $row['proj_desc'];
+                        $image = $row['proj_img'];
+                        echo'<label for="s1" id="slide1">
                             <div class="card">
-                                <img src="uploads/LAYA.png" alt="Image 1" class="proj-img">
+                                <img src="uploads/'.$image.'" alt="Image 1" class="proj-img">
                                 <div class="txt-overlay">
-                                    <h1 class="proj-title">LAYA (Legal Aid at Your Access)</h1>
-                                    <h2 class="proj-desc">An AI chatbot designed to address all your inquiries and needs related to Philippine laws. This advanced virtual assistant provides comprehensive and accurate information, helping you navigate legal questions, understand regulations, and stay informed about legal matters specific to the Philippines.</h2>
+                                    <h1 class="proj-title">'.$title.'</h1>
+                                    <h2 class="proj-desc">'.$description.'</h2>
                                 </div>
                             </div>
-                        </label>
-                        <label for="s2" id="slide2">
-                            <div class="card">
-                                <img src="uploads/LAYA.png" alt="Image 2" class="proj-img">
-                                <div class="txt-overlay">
-                                    <h1 class="proj-title">LAYA (Legal Aid at Your Access)</h1>
-                                    <h2 class="proj-desc">An AI chatbot designed to address all your inquiries and needs related to Philippine laws. This advanced virtual assistant provides comprehensive and accurate information, helping you navigate legal questions, understand regulations, and stay informed about legal matters specific to the Philippines.</h2>
-                                </div>
-                            </div>
-                        </label>
-                        <label for="s3" id="slide3">
-                            <div class="card">
-                                <img src="uploads/LAYA.png" alt="Image 3" class="proj-img">
-                                <div class="txt-overlay">
-                                    <h1 class="proj-title">LAYA (Legal Aid at Your Access)</h1>
-                                    <h2 class="proj-desc">An AI chatbot designed to address all your inquiries and needs related to Philippine laws. This advanced virtual assistant provides comprehensive and accurate information, helping you navigate legal questions, understand regulations, and stay informed about legal matters specific to the Philippines.</h2>
-                                </div>
-                            </div>
-                        </label>
-                    </div>
+                        </label>';
+                    }
+                }
+                ?>
                     <div class="dots">
                         <label for="s1" class="active"></label>
                         <label for="s2"></label>
@@ -222,8 +227,8 @@
                         <div class="noise-overlay"></div>
                     </div>
                     <div class="button-container">
-                        <div class="btn" onclick="location.href='contact.html';"> <!--glitch button-->
-                            <button class="cybr-btn">Contact_<span aria-hidden></span>
+                        <div class="btn" onclick="location.href='contact.php';"> <!--glitch button-->
+                            <button class="cybr-btn"><a href="contact.php"></a>Contact_<span aria-hidden></span>
                                 <span aria-hidden class="cybr-btn_glitch">Connect</span>
                                 <span aria-hidden class="cybrs-btn_tag"></span></button>
                         </div>
@@ -256,13 +261,13 @@
                     <div class="footer-links-container">
                         <div class="footer-link-title-1">Menu</div>
                         <a href="#" class="footer-link-title" style="--clr:#CB1DCD"><span class="spn-link">Home</span></a>
-                        <a href="about.html" class="footer-link-title" style="--clr:#CB1DCD"><span class="spn-link">About</span></a>
+                        <a href="about.php" class="footer-link-title" style="--clr:#CB1DCD"><span class="spn-link">About</span></a>
                         <a href="#projects" class="footer-link-title" style="--clr:#CB1DCD"><span class="spn-link">Projects</span></a>
-                        <a href="contact.html" class="footer-link-title" style="--clr:#CB1DCD"><span class="spn-link">Contact</span></a>
+                        <a href="contact.php" class="footer-link-title" style="--clr:#CB1DCD"><span class="spn-link">Contact</span></a>
                     </div>
                     <div class="footer-links-container">
                         <div class="footer-link-title-1">Admin</div>
-                        <a href="crud.html" class="footer-link-title" style="--clr:#CB1DCD"><span class="spn-link">Crud</span></a>
+                        <a href="login.php" class="footer-link-title" style="--clr:#CB1DCD"><span class="spn-link">Crud</span></a>
                         
                     </div>
                 </div>
